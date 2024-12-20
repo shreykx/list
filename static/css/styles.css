@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:wght@500&display=swap');
+
+* {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Example weight, adjust as needed */
+    font-style: normal;
+}
+.no-scollbar::-webkit-scrollbar {
+    display: none;
+}
+
+#parent_div {
+    transition: all;
+    transition-duration: 200;
+}

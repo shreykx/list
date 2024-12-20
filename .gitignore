@@ -1,0 +1,22 @@
+# Ignore all log files
+*.log
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore build directory
+build/
+
+# Ignore environment variable files
+.env
+
+
+env/
+
+__pycache__/
+
+
+*.db
+
+# Ignore coverage directory
+coverage/
