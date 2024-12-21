@@ -1,0 +1,58 @@
+# This file is a template and might need editing before it works on your project.
+# This is a sample GitHub Actions workflow that demonstrates a basic 3-step CI/CD pipeline.
+# Instead of real tests or scripts, it uses echo commands to simulate the pipeline execution.
+
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Compile Code
+        run: |
+          echo "Compiling the code..."
+          echo "Compile complete."
+
+  unit-test:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Run Unit Tests
+        run: |
+          echo "Running unit tests... This will take about 60 seconds."
+          sleep 60
+          echo "Code coverage is 90%."
+
+  lint-test:
+    name: Linting
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Lint Code
+        run: |
+          echo "Linting code... This will take about 10 seconds."
+          sleep 10
+          echo "No lint issues found."
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: [unit-test, lint-test]
+    steps:
+      - name: Deploy Application
+        run: |
+          echo "Deploying application..."
+          echo "Application successfully deployed."
