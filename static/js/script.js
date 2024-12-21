@@ -2,6 +2,11 @@ function fillTodos(array_todos) {
     const parent_url = document.getElementById("parent_url")
     parent_url.innerHTML = ""
 
+
+
+    const li_up = document.createElement("li")
+    li_up.classList.add("py-20")
+    parent_url.appendChild(li_up)
     array_todos.forEach(element => {
         const li = document.createElement("li")
         li.classList.add("p-1", "flex");
